@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { EmpService } from '../../service/emp-service';
 
 @Component({
   selector: 'app-employee-form',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './employee-form.html',
   styleUrl: './employee-form.css',
 })
-export class EmployeeForm {
+export class EmployeeForm implements OnInit{
 
+  employeeSrv = inject(EmpService);
+
+  ngOnInit(): void {
+    
+  }
 }
